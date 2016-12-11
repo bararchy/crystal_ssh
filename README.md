@@ -38,10 +38,10 @@ You can always look at the sepcs to see examples
 ## Development
 
 TODO:  
-* [] Adding full authentication for user & pass  
-* [] Adding more hooks for events 
-* [] Adding the shell integration
-* [] More stuff :)
+* [ ] Adding full authentication for user & pass  
+* [ ] Adding more hooks for events 
+* [ ] Adding the shell integration  
+* [ ] More stuff :)  
 
 ## Contributing
 
