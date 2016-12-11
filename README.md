@@ -1,6 +1,7 @@
 # crystal_ssh
 
-TODO: Write a description here
+This project aims to fully implement the libssh bindings in Crystal languge.
+Allowing programmers to spin up ssh servers and clients
 
 ## Installation
 
@@ -9,24 +10,42 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   crystal_ssh:
-    github: [your-github-name]/crystal_ssh
+    github: bararchy/crystal_ssh
 ```
 
 ## Usage
 
 ```crystal
 require "crystal_ssh"
+
+ ssh = SSHServer.new({
+      :user           => "foo",
+      :password       => "bar",
+      :rsakey         => "spec/foo.key",
+      :timeout        => "360",
+      :port           => "2020",
+      :banner         => "Welcome to Crystal SSH :)",
+      :listen_address => "0.0.0.0",
+    })
+    
+  # Without a spawn this will block
+  # When client side is ready the check would be to see if the server responds
+  ssh.listen
 ```
 
-TODO: Write usage instructions here
+You can always look at the sepcs to see examples 
 
 ## Development
 
-TODO: Write development instructions here
+TODO:  
+* [] Adding full authentication for user & pass  
+* [] Adding more hooks for events 
+* [] Adding the shell integration
+* [] More stuff :)
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/crystal_ssh/fork )
+1. Fork it ( https://github.com/bararchy/crystal_ssh/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -34,4 +53,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) bararchy - creator, maintainer
+- [bararchy](https://github.com/bararchy) bararchy - creator, maintainer
