@@ -36,6 +36,9 @@ You can always look at the sepcs to see examples
 
 ## Development
 
+The C sources and docs can be found here: http://api.libssh.org/master/group__libssh.html  
+I got the project started in Ruby here: https://github.com/bararchy/SSHSocket if another referance helps
+
 TODO:  
 * [ ] Adding full authentication for user & pass  
 * [ ] Adding more hooks for events 
