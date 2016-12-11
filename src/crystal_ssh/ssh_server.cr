@@ -1,12 +1,12 @@
 class SSHServer
-  def initialize(options : Hash(Symbol, (String | Int32)))
-    @user_name = options[:user].as String
-    @password = options[:password].as String
-    @rsakey = options[:rsakey].as String
-    @port = options[:port].as String
-    @listen_address = options[:listen_address].as String
-    @timeout = options[:timeout].as String
-    @banner = "Welcome to Crystal SSH" || options[:banner].as String
+  def initialize(username, password, rsakey, port = "22", listen_address = "0.0.0.0", timeout = "360", banner = "Welcome to Crystal SSH")
+    @user_name = username.as String
+    @password = password.as String
+    @rsakey = rsakey.as String
+    @port = port.as String
+    @listen_address = listen_address.as String
+    @timeout = timeout.as String
+    @banner = banner
 
     # initialize the ssh instance
     @sshbind = LibSSH.ssh_bind_new
