@@ -55,4 +55,4 @@ TODO:
 
 ## Contributors
 
-- [bararchy](https://github.com/bararchy) bararchy - creator, maintainer
+- [bararchy](https://github.com/bararchy) - creator, maintainer
