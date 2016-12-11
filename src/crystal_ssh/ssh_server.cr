@@ -6,7 +6,7 @@ class SSHServer
     @port = port.as String
     @listen_address = listen_address.as String
     @timeout = timeout.as String
-    @banner = banner
+    @banner = banner.as String
 
     # initialize the ssh instance
     @sshbind = LibSSH.ssh_bind_new
